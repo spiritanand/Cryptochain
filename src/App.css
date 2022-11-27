@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    display: flex;
+    overflow: hidden;
+}
+
+.outlet {
+    margin-left: 1rem;
+}
+
+/*navbar*/
+
+.navbar {
+    flex: 1;
+    background-color: rgb(0, 21, 41);
+    z-index: 1;
+}
+
+.menu-control-container {
+    display: none;
+    background-color: transparent;
+    color: white;
+}
+
+.main {
+    flex: 5;
+    width: 100%;
+}
+
+.outlet {
+    padding: 1rem;
+    min-height: 100vh;
+}
+
+.nav-container {
+    position: fixed;
+    height: 100vh;
+    background-color: rgb(0, 21, 41);
+}
+
+.logo-container {
+    background-color: #001529;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+    gap: 1rem;
+}
+
+/*home*/
+
+.home-heading-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.show-more {
+    margin-top: 0 !important;
+}
+
+/*crypto*/
+
+.crypto-card {
+    min-width: 250px;
+}
+
+.crypto-card .crypto-image {
+    width: 35px;
+}
+
+/*news*/
+
+.news-card {
+    min-height: 300px !important;
+}
+
+.news-title {
+    width: 70%;
+}
+
+.news-image-container .img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.news-card p {
+    color: black;
+    margin: 10px 0 !important;
+}
+
+.provider-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*coin details*/
+
+.coin-detail-container {
+    margin: 30px;
+}
+
+.coin-heading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 10px;
+}
+
+.coin-heading-container .coin-name {
+    font-weight: 900;
+}
+
+.coin-heading-container p {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+.coin-value-statistics {
+    flex: 1;
+}
+
+.coin-value-statistics-heading p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.stats-container h2 {
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-top: 20px;
+}
+
+.coin-detail-heading {
+    font-weight: 700 !important;
+    margin-top: 20px !important;
+}
+
+.coin-stats {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    font-size: 1rem;
+    opacity: 0.9;
+    padding: 20px;
+
+}
+
+.coin-stats-name {
+    display: flex;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.stats {
+    font-weight: 800;
+}
+
+.coin-desc-link {
+    flex: 2;
+    gap: 40px;
+}
+
+.coin-desc-link h1,
+.coin-desc-link h2 {
+    font-weight: 700;
+    text-align: center;
+}
+
+.coin-desc-link p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.coin-desc-link h3 {
+    font-weight: 700;
+    margin: 0.75rem 0 0.25rem;
+}
+
+.coin-desc {
+    flex: 0.5;
+}
+
+.coin-links {
+    padding: 0 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+}
+
+.coin-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.link-name {
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+
+.coin-link a {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.coin-link:hover, .coin-stats:hover {
+    background-color: darkseagreen;
+}
+
+/*line chart*/
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.chart-title {
+    text-align: center;
+}
+
+.price-container {
+    display: flex !important;
+    gap: 20px !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+}
+
+.price-change {
+    font-weight: 900 !important;
+}
+
+.current-price {
+    margin-top: 0px !important;
+    font-weight: 900 !important;
+}
+
+/*error*/
+.error {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    line-height: 1.5;
+    font-family: 'Inter', sans-serif;
+}
+
+.error h1 {
+    max-width: 500px;
+    font-weight: 400;
+}
+
+.error span {
+    color: orangered;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.25rem;
+}
+
+.error img {
+    width: min(500px, 70%);
+    border-radius: 2rem;
+}
+
+.error a {
+    color: olivedrab;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.error a:hover {
+    color: darkseagreen;
+}
+
+/*footer*/
+
+.footer {
+    background-color: #001529;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+}
+
+/*media query*/
+
+@media screen and (max-width: 1300px) {
+    .main {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .main {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .main {
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .app {
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .navbar {
+        flex: 1;
+    }
+
+    .main {
+        flex: 1;
+        margin-top: 90px;
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+    .nav-container {
+        height: 8vh;
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .menu-control-container {
+        display: block !important;
+    }
+
+    .ant-menu {
+        position: absolute;
+        right: 0px;
+    }
+
+    .home-title {
+        font-size: 1.4rem !important;
+    }
+
+    .show-more {
+        font-size: 1.3rem !important;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .stats-container {
+        flex-direction: column;
+    }
+
+    .coin-desc-link {
+        flex-direction: column;
+    }
+
+    .stats-container h2 {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .coin-links {
+        padding: 0px;
+    }
+
+    .coin-detail-container {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .heading {
+        margin-top: 20px;
+    }
+}

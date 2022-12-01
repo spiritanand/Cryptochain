@@ -16,7 +16,7 @@ import {
 import Title from "antd/es/typography/Title.js";
 import HTMLReactParser from "html-react-parser";
 import millify from "millify";
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import {useParams} from "react-router-dom";
 import CryptoLineChart from "../components/CryptoLineChart.jsx";
 import {
@@ -37,64 +37,62 @@ function CryptoDetail(props) {
 		} = useGetCryptoHistoryQuery({
 	coinId,
 	timePeriod
-  })
+  });
   
   const coinData = cryptoDetail?.data?.coin;
   
-  console.log(coinHistory);
-  
   const time = [
-	'3h',
-	'24h',
-	'7d',
-	'30d',
-	'3m',
-	'1y',
-	'3y',
-	'5y'
+	"3h",
+	"24h",
+	"7d",
+	"30d",
+	"3m",
+	"1y",
+	"3y",
+	"5y"
   ];
   
   const stats = [
 	{
-	  title: 'Price to USD',
+	  title: "Price to USD",
 	  value: `$ ${coinData?.price && millify(coinData?.price)}`,
 	  icon : <DollarCircleOutlined/>
 	},
 	{
-	  title: 'Rank',
+	  title: "Rank",
 	  value: coinData?.rank,
 	  icon : <NumberOutlined/>
 	},
 	{
-	  title: '24h Volume',
+	  title: "24h Volume",
 	  value: `$ ${coinData?.["24hVolume"] && millify(coinData?.["24hVolume"])}`,
 	  icon : <ThunderboltOutlined/>
 	},
 	{
-	  title: 'Market Cap',
+	  title: "Market Cap",
 	  value: `$ ${coinData?.marketCap && millify(coinData?.marketCap)}`,
 	  icon : <DollarCircleOutlined/>
 	},
 	{
-	  title: 'All-time-high(daily avg.)',
+	  title: "All-time-high(daily avg.)",
 	  value: `$ ${coinData?.allTimeHigh?.price && millify(
 		coinData?.allTimeHigh?.price)}`,
 	  icon : <TrophyOutlined/>
 	},
 	{
-	  title: 'Approved Supply',
+	  title: "Approved Supply",
 	  value: coinData?.supply?.confirmed
 			 ? <CheckOutlined/>
 			 : <StopOutlined/>,
 	  icon : <ExclamationCircleOutlined/>
 	},
 	{
-	  title: 'Total Supply',
+	  title: "Total Supply",
 	  value: `${coinData?.supply?.total && millify(coinData?.supply?.total)}`,
 	  icon : <ExclamationCircleOutlined/>
 	},
 	{
-	  title: 'Circulating Supply',
+	  title: "Circulating Supply",
 	  value: `${coinData?.supply?.circulating && millify(
 		coinData?.supply?.circulating)}`,
 	  icon : <ExclamationCircleOutlined/>

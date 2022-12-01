@@ -41,7 +41,9 @@ function Cryptocurrencies({simplified}) {
 		 <>
 		   {!simplified &&
 			(
-			  <div className = "search-crypto">
+			  <div className = "search-crypto" style={{
+				margin: "1rem auto 2rem"
+			  }}>
 				<Input placeholder = "Search crypto..."
 					   onChange = {e => setSearchTerm(e.target.value)}
 				/>

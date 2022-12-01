@@ -7,7 +7,7 @@ import {
 } from "antd";
 import Title from "antd/es/typography/Title.js";
 import moment from "moment";
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import {useGetCryptosQuery} from "../services/cryptoApi.js";
 import {useGetCryptoNewsQuery} from "../services/cryptoNewsApi.js";
 
@@ -25,7 +25,7 @@ function News({simplified}) {
   const {data: cryptos} = useGetCryptosQuery(100);
   
   const stockCryptoUrl = "https://images.unsplash.com/photo-1621504450181-5d356f61d307?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&w=100";
-  const stockNewsUrl = "https://images.unsplash.com/photo-1529362487499-b149087a4f62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&q=80"
+  const stockNewsUrl = "https://images.unsplash.com/photo-1529362487499-b149087a4f62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&q=80";
   
   return (
 	<>{!isFetching && cryptoNews
@@ -33,7 +33,11 @@ function News({simplified}) {
 	   (
 		 <>
 		   {!simplified && (
-			 <Col span = {24}>
+			 <Col span = {24}
+				  style = {{
+					margin: "1rem auto 2rem"
+				  }}
+			 >
 			   <Select showSearch
 					   className = "select-news"
 					   placeholder = "Select a Cryptocurrency"
